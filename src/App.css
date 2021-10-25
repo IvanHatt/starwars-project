@@ -1,19 +1,21 @@
+body {
+  background-image: url('/src/assets/earth.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* header  */
 .header {
   height: 25vh;
-  background-image: url('/src/assets/earth.jpg');
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(19, 19, 19);
 }
 
 .header h1 {
   text-align: center;
   color: #f2f2f2;
-  text-shadow: 1px 1px 10px black;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .header .favs {
@@ -24,11 +26,22 @@
 /* ************************  */
 
 .content {
-  border-color: beige;
+  height: 70vh;
+  display: grid;
+  place-items: center;
+}
+
+.film-content {
+  width: 70%;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  border-radius: 20px;
 }
 
 .toc-container {
-  background-color: rgb(160, 160, 160);
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
 }
 
 .toggle-toc {
@@ -41,5 +54,8 @@
 @media only screen and (min-width: 576px) {
   .toggle-toc {
     display: none !important;
+  }
+  .header h1 {
+    font-size: 5rem;
   }
 }
