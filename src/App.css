@@ -1,9 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Russo+One&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css');
+
 body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-image: url('/src/assets/earth.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* header  */
+
+h1,
+h2 {
+  font-family: 'Russo One', sans-serif;
+}
+
+main {
+  padding: 0 !important;
+}
+
+/* header component  */
 .header {
   height: 25vh;
   display: flex;
@@ -25,6 +42,7 @@ body {
 }
 /* ************************  */
 
+/* content component */
 .content {
   height: 70vh;
   display: grid;
@@ -38,17 +56,25 @@ body {
   backdrop-filter: blur(4px);
   border-radius: 20px;
 }
+/* ************************  */
 
+/* TOC component */
 .toc-container {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
+  color: #f2f2f2;
 }
 
-.toggle-toc {
-  margin: 10px;
-  position: absolute;
-  right: 1rem;
+.toc-container i {
+  color: #f2f2f2 !important;
+  font-size: 2rem;
 }
+
+.toc-container button:focus {
+  box-shadow: none;
+}
+
+/* ************************  */
 
 /* desktop - bigger than sm576 */
 @media only screen and (min-width: 576px) {
