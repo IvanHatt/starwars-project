@@ -10,10 +10,10 @@ function App() {
       <Header></Header>
       <main className='container-fluid'>
         <div className='row'>
-          <div className='col-sm-4'>
+          <div className='col-lg-4'>
             <Toc></Toc>
           </div>
-          <div className='col-sm-8'>
+          <div className='col-lg-8'>
             <Content></Content>
           </div>
         </div>
