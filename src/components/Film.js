@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Film = ({ film }) => {
+const Film = ({ film, handleFav }) => {
   const { title, opening_crawl, director, release_date } = film
   return (
     <div className='film-content'>
@@ -14,6 +14,7 @@ const Film = ({ film }) => {
         data-bs-toggle='tooltip'
         data-bs-placement='bottom'
         title='Add to favorites'
+        onClick={() => handleFav(film)}
       >
         <i className='bi bi-star'></i>
       </button>
