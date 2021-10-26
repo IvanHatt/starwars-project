@@ -44,18 +44,17 @@ main {
 
 /* content component */
 .content {
-  height: 70vh;
-  display: grid;
-  place-items: center;
+  min-height: 100vh;
 }
 
 .film-content {
-  margin: 1.5rem;
+  margin: 1.5rem auto;
   width: 70%;
   padding: 1rem;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(4px);
   border-radius: 20px;
+  box-shadow: 20px 20px 20px rgb(0, 0, 0, 0.7);
 }
 /* ************************  */
 
