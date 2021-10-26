@@ -12,6 +12,7 @@ const Content = () => {
   const [favs, setFavs] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
+  // fetch film to display
   useEffect(() => {
     const fetchFilm = async () => {
       setIsLoading(true)
@@ -26,17 +27,19 @@ const Content = () => {
     fetchFilm()
   }, [location])
 
+  // fetch favorite from local storage
   useEffect(() => {
     const favsStored = JSON.parse(localStorage.getItem('favorites-list'))
     setFavs(favsStored)
   }, [setFavs])
 
+  // add favorite handler
   const addFav = (film) => {
     const newFavList = [...favs, film]
     setFavs(newFavList)
     saveToLocalStorage(newFavList)
   }
-
+  // save to local storage
   const saveToLocalStorage = (favs) => {
     localStorage.setItem('favorites-list', JSON.stringify(favs))
   }

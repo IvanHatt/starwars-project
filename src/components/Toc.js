@@ -55,10 +55,6 @@ const Toc = () => {
           </ul>
         </div>
       </div>
-
-      {/* <div className='toc-container'>
-      
-    </div> */}
     </nav>
   )
 }
