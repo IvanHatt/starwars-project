@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Toc = () => {
   return (
@@ -21,38 +22,34 @@ const Toc = () => {
         <div className='collapse navbar-collapse p-3' id='toc'>
           <ul className='nav nav-pills flex-column'>
             <li className='nav-item'>
-              <a
-                href='www.g.de'
-                className='nav-link active'
-                aria-current='page'
-              >
-                A New Hope
-              </a>
+              <Link className='nav-link active' to='/4'>
+                Home
+              </Link>
             </li>
             <li>
-              <a href='www.g.de' className='nav-link text-white'>
-                Second
-              </a>
+              <Link className='nav-link' to='/4'>
+                Home
+              </Link>
             </li>
             <li>
-              <a href='www.g.de' className='nav-link text-white'>
-                Second
-              </a>
+              <Link className='nav-link' to='/4'>
+                Home
+              </Link>
             </li>
             <li>
-              <a href='www.g.de' className='nav-link text-white'>
-                Second
-              </a>
+              <Link className='nav-link' to='/4'>
+                Home
+              </Link>
             </li>
             <li>
-              <a href='www.g.de' className='nav-link text-white'>
-                Second
-              </a>
+              <Link className='nav-link' to='/4'>
+                Home
+              </Link>
             </li>
             <li>
-              <a href='www.g.de' className='nav-link text-white'>
-                Second
-              </a>
+              <Link className='nav-link' to='/4'>
+                Home
+              </Link>
             </li>
           </ul>
         </div>

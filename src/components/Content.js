@@ -1,6 +1,9 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Content = () => {
+  let location = useLocation()
+  console.log(location)
   return (
     <div className='content'>
       <div className='film-content'>
@@ -20,21 +23,21 @@ const Content = () => {
         <p>Released on</p>
         <button
           type='button'
-          class='btn btn-dark m-1'
+          className='btn btn-dark m-1'
           data-bs-toggle='tooltip'
           data-bs-placement='bottom'
           title='Add to favorites'
         >
-          <i class='bi bi-star'></i>
+          <i className='bi bi-star'></i>
         </button>
         <button
           type='button'
-          class='btn btn-dark m-1'
+          className='btn btn-dark m-1'
           data-bs-toggle='tooltip'
           data-bs-placement='bottom'
           title='Remove from favorites'
         >
-          <i class='bi bi-trash'></i>
+          <i className='bi bi-trash'></i>
         </button>
       </div>
     </div>
