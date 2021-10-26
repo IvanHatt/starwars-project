@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
 import { Link } from 'react-router-dom'
+import Spinner from './Spinner'
 
 const Toc = () => {
+  const [list, setList] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchList = async () => {
+      setIsLoading(true)
+      const result = await axios(`https://swapi.dev/api/films/`)
+
+      setList(result.data.results)
+      setIsLoading(false)
+    }
+
+    fetchList()
+  }, [])
+
   return (
     <nav className='navbar navbar-expand-lg d-flex flex-column justify-content-start toc-container'>
       <div className='container-fluid pt-3'>
@@ -21,36 +38,20 @@ const Toc = () => {
       <div className='container-fluid'>
         <div className='collapse navbar-collapse p-3' id='toc'>
           <ul className='nav nav-pills flex-column'>
-            <li className='nav-item'>
-              <Link className='nav-link active' to='/4'>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className='nav-link' to='/4'>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className='nav-link' to='/4'>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className='nav-link' to='/4'>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className='nav-link' to='/4'>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link className='nav-link' to='/4'>
-                Home
-              </Link>
-            </li>
+            {isLoading ? (
+              <Spinner />
+            ) : (
+              list.map((film) => (
+                <li className='nav-item' key={film.episode_id}>
+                  <Link
+                    className='nav-link'
+                    to={`${film.url.split('films').pop()}`}
+                  >
+                    {film.title}
+                  </Link>
+                </li>
+              ))
+            )}
           </ul>
         </div>
       </div>
