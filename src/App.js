@@ -1,3 +1,4 @@
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header'
@@ -6,19 +7,21 @@ import Toc from './components/Toc'
 
 function App() {
   return (
-    <div>
-      <Header></Header>
-      <main className='container-fluid'>
-        <div className='row'>
-          <div className='col-lg-4'>
-            <Toc></Toc>
+    <Router>
+      <div>
+        <Header></Header>
+        <main className='container-fluid'>
+          <div className='row'>
+            <div className='col-lg-4'>
+              <Toc></Toc>
+            </div>
+            <div className='col-lg-8'>
+              <Content></Content>
+            </div>
           </div>
-          <div className='col-lg-8'>
-            <Content></Content>
-          </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </Router>
   )
 }
 
