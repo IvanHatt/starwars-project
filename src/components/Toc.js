@@ -3,7 +3,7 @@ import React from 'react'
 const Toc = () => {
   return (
     <nav className='navbar navbar-expand-lg d-flex flex-column justify-content-start toc-container'>
-      <div className='container-fluid'>
+      <div className='container-fluid pt-3'>
         <h2>Movie List</h2>
         <button
           className='navbar-toggler'
